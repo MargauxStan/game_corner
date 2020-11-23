@@ -4,7 +4,7 @@ class GamesController < ApplicationController
   end
 
   def show
-    @coctail = Game.find(params[:id])
+    @game = Game.find(params[:id])
   end
 
   def new
@@ -29,6 +29,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name)
+    params.require(:game).permit(:name, :genre, :platform, :description, :price, :url_trailer)
   end
 end
