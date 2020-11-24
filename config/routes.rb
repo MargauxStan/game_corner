@@ -9,8 +9,8 @@ Rails.application.routes.draw do
   namespace :account do
     resources :bookings, only: [:index, :show] do
       member do
-        post :accepted
-        post :declined
+        patch :accepted
+        patch :declined
       end
     end
   end
