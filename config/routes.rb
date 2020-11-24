@@ -7,6 +7,7 @@ Rails.application.routes.draw do
   end
 
   namespace :account do
+    resources :games, only: [:index, :edit, :update, :destroy]
     resources :bookings, only: [:index, :show] do
       member do
         patch :accepted

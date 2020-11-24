@@ -1,0 +1,11 @@
+<h1>Account::Games#edit</h1>
+<p>Find me in app/views/account/games/edit.html.erb</p>
+<%= simple_form_for [:account, @game] do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description %>
+  <%= f.input :platform %>
+  <%= f.input :price %>
+  <%= f.input :url_trailer %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+
+<% end %>
