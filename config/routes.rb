@@ -10,8 +10,8 @@ Rails.application.routes.draw do
     resources :games, only: [:index, :edit, :update, :destroy]
     resources :bookings, only: [:index, :show] do
       member do
-        post :accepted
-        post :declined
+        patch :accepted
+        patch :declined
       end
     end
   end
