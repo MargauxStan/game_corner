@@ -13,14 +13,19 @@ require 'faker'
     user.email = Faker::Internet.email
     user.password = "azerty"
     user.save
-    30.times do
+end
+
+users = User.all
+
+users.each do |user|
+    5.times do
         game = Game.new
         game.title = Faker::Game.title
         game.platform = Faker::Game.platform
         game.description = Faker::Lorem.paragraph(sentence_count: 10)
         game.genre = Faker::Game.genre
         game.price = Faker::Number.decimal(l_digits: 2)
-        game.user_id = user.id
+        game.user = user
         game.save
     end
 end
