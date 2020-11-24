@@ -7,7 +7,7 @@ class CreateGames < ActiveRecord::Migration[6.0]
       t.string :genre
       t.integer :price
       t.references :users, null: false, foreign_key: true
-      t.string :url_trailor
+      t.string :url_trailer
 
       t.timestamps
     end
