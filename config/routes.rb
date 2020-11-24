@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :account do
+    get 'bookings/index'
+    get 'bookings/accepted'
+    get 'bookings/declined'
+  end
   devise_for :users
   root to: 'pages#home'
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
