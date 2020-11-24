@@ -6,6 +6,7 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+User.destroy_all
 
 5.times do
     user = User.new
@@ -20,7 +21,7 @@ users = User.all
 users.each do |user|
     5.times do
         game = Game.new
-        game.title = Faker::Game.title
+        game.name = Faker::Game.title
         game.platform = Faker::Game.platform
         game.description = Faker::Lorem.paragraph(sentence_count: 10)
         game.genre = Faker::Game.genre

@@ -16,15 +16,15 @@ ActiveRecord::Schema.define(version: 2020_11_23_161124) do
   enable_extension "plpgsql"
 
   create_table "bookings", force: :cascade do |t|
-    t.bigint "users_id", null: false
-    t.bigint "games_id", null: false
+    t.bigint "user_id", null: false
+    t.bigint "game_id", null: false
     t.date "starting_date"
     t.date "ending_date"
     t.string "status"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["games_id"], name: "index_bookings_on_games_id"
-    t.index ["users_id"], name: "index_bookings_on_users_id"
+    t.index ["game_id"], name: "index_bookings_on_game_id"
+    t.index ["user_id"], name: "index_bookings_on_user_id"
   end
 
   create_table "games", force: :cascade do |t|
@@ -33,11 +33,11 @@ ActiveRecord::Schema.define(version: 2020_11_23_161124) do
     t.text "description"
     t.string "genre"
     t.integer "price"
-    t.bigint "users_id", null: false
-    t.string "url_trailor"
+    t.bigint "user_id", null: false
+    t.string "url_trailer"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.index ["users_id"], name: "index_games_on_users_id"
+    t.index ["user_id"], name: "index_games_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -53,7 +53,7 @@ ActiveRecord::Schema.define(version: 2020_11_23_161124) do
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
-  add_foreign_key "bookings", "games", column: "games_id"
-  add_foreign_key "bookings", "users", column: "users_id"
-  add_foreign_key "games", "users", column: "users_id"
+  add_foreign_key "bookings", "games"
+  add_foreign_key "bookings", "users"
+  add_foreign_key "games", "users"
 end

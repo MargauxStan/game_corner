@@ -1,5 +1,5 @@
 class Game < ApplicationRecord
-  belongs_to :users
+  belongs_to :user
   validates :user, presence: true
   validates :name, presence: true
   validates :price, presence: true
