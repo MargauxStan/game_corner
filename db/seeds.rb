@@ -5,3 +5,27 @@
 #
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
+require 'faker'
+
+5.times do
+    user = User.new
+    user.username = Faker::Creature::Animal.name
+    user.email = Faker::Internet.email
+    user.password = "azerty"
+    user.save
+end
+
+users = User.all
+
+users.each do |user|
+    5.times do
+        game = Game.new
+        game.title = Faker::Game.title
+        game.platform = Faker::Game.platform
+        game.description = Faker::Lorem.paragraph(sentence_count: 10)
+        game.genre = Faker::Game.genre
+        game.price = Faker::Number.decimal(l_digits: 2)
+        game.user = user
+        game.save
+    end
+end
