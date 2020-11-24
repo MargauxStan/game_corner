@@ -1,11 +1,10 @@
 <h1>games_show</h1>
 
 <ul>
-  <% @game.each do |f| %>
     <li>
-      <%= f.name %>
-      <%= f.platform %>
-      <%= f.price %>
+      <%= @game.name %>
+      <%= @game.platform %>
+      <%= @game.price %>
       <p>----------------</p>
     </li>
 </ul>
