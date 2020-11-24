@@ -7,7 +7,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
 
-(1..5).each do |id|
+5.times do
     User.create!(
         username: Faker::Creature::Animal.name,
         email: Faker::Internet.email,
@@ -15,7 +15,7 @@ require 'faker'
     )
 end
 
-(1..30).each do |i|
+(1..30).each do
     Game.create!(
         title: Faker::Game.title,
         platform: Faker::Game.platform,
