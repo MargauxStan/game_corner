@@ -1,0 +1,10 @@
+<%= simple_form_for @game do |f| %>
+  <%= f.input :name %>
+  <%= f.input :category %>
+  <%= f.input :description %>
+  <%= f.input :platform %>
+  <%= f.input :price %>
+  <%= f.input :url_trailer %>
+  <%= f.submit "Submit", class: "btn btn-primary" %>
+
+<% end %>

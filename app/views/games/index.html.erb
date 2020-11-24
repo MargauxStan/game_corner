@@ -1,0 +1,9 @@
+<% @games.each do |game| %>
+<h3><%= game.name %></h3>
+<ul>
+  <li>Genre: <%= game.genre %></li>
+  <li>Description: <%= game.description %></li>
+  <li>Platform: <%= game.platform %></li>
+  <li>Price: <%= game.price %></li>
+</ul>
+<% end %>
