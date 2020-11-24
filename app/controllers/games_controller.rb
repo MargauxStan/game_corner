@@ -7,10 +7,12 @@ class GamesController < ApplicationController
 
   def show
     @game = Game.find(params[:id])
+    authorize @game
   end
 
   def new
     @game = Game.new
+    authorize @game
   end
 
   def create
@@ -24,12 +26,6 @@ class GamesController < ApplicationController
       else
         render :new
       end
-  end
-
-  def destroy
-    @game = Game.find(params[:id])
-    @game.destroy
-    redirect_to root_path
   end
 
   private
