@@ -2,13 +2,27 @@
 <p>Find me in app/views/pages/home.html.erb</p>
 <%= link_to "see my games", account_games_path %>
 <%= link_to "new game", new_game_path %>
+<div class="container">
+  <div class="card_header">
+    <% @games.each do |game| %>
 
-<% @games.each do |game| %>
-<h3><%= link_to game.name, game_path(game) %></h3>
-<ul>
-  <li>Genre: <%= game.genre %></li>
-  <li>Description: <%= game.description %></li>
-  <li>Platform: <%= game.platform %></li>
-  <li>Price: <%= game.price %></li>
-</ul>
-<% end %>
+    <%= link_to game_path(game) do %>
+
+    <div class="card_category">
+      <div class="title">
+        <h4><%= game.name %></h4>
+      </div>
+      <ul>
+        <div class="platform">
+          <li><%= game.platform %></li>
+        </div>
+        <div class="price">
+          <li><%= game.price %> /day</li>
+        </div>
+      </ul>
+    </div>
+    <% end %>
+    <% end %>
+  </div>
+</div>
+
