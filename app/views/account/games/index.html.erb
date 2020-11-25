@@ -1,7 +1,9 @@
 <h1>Account::Games#index</h1>
 <p>Find me in app/views/account/games/index.html.erb</p>
 <p>User:</p>
-<%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
+<% if current_user.photo.attachment %>
+  <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
+<% end %>
 <p>---------------------</p>
 <% @games.each do |game| %>
 <h3><%= game.name %></h3>
