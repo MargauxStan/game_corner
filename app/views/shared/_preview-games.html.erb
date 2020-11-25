@@ -9,7 +9,25 @@
     <div class="divider">
     </div>
   </div>
-  <div class="game-preview-grid">
+
+  <div class="card_header">
+    <% @games.each do |game| %>
+    <%= link_to game_path(game) do %>
+
+    <div class="card_category">
+      <div class="title">
+        <h4><%= game.name %></h4>
+      </div>
+      <ul>
+        <div class="platform">
+          <li><%= game.platform %></li>
+        </div>
+        <div class="price">
+          <li><%= game.price %> /day</li>
+        </div>
+      </ul>
+    </div>
+    <% end %>
+    <% end %>
   </div>
-</div>
 </div>
