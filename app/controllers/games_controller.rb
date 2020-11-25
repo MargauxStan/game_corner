@@ -2,6 +2,10 @@ class GamesController < ApplicationController
 
   skip_before_action :authenticate_user!, only: [:index, :show]
   
+  def index
+    @games = policy_scope(Game).all
+  end
+  
   def show
     @game = Game.find(params[:id])
     authorize @game
@@ -28,6 +32,6 @@ class GamesController < ApplicationController
   private
 
   def game_params
-    params.require(:game).permit(:name, :genre, :platform, :description, :price, :url_trailer)
+    params.require(:game).permit(:name, :genre, :platform, :description, :price, :url_trailer, :photo)
   end
 end
