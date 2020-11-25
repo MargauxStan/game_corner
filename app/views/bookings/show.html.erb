@@ -1,9 +1,11 @@
-<h1>Bookings#show</h1>
-<p>Find me in app/views/bookings/show.html.erb</p>
-<p>game: <%= @booking.game.name %></p>
-<p>user : <%= @booking.user.username %></p>
-<p>owner : <%= @booking.game.user.username %></p>
-<p>starting date : <%= @booking.starting_date %></p>
-<p>ending date : <%= @booking.ending_date %></p>
+<div class="container">
+  <h1>Booking Done !</h1>
+  <p>game: <%= @booking.game.name %></p>
+  <p>user : <%= @booking.user.username %></p>
+  <p>owner : <%= @booking.game.user.username %></p>
+  <p>starting date : <%= @booking.starting_date %></p>
+  <p>ending date : <%= @booking.ending_date %></p>
 
-<%= link_to 'home', root_path %>
+  <%= link_to 'home', root_path %>
+
+</div>
