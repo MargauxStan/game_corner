@@ -1,6 +1,12 @@
-<p>---------------------</p>
-<% @games.each do |game| %>
-<h3><%= game.name %></h3>
-<%= link_to "edit", edit_account_game_path(game)  %>
-<%= link_to "delete", account_game_path(game), method: :delete %>
-<% end %>
+<div class="container index">
+  <h1>All our Games</h1>
+  <div class="index-grid">
+    <% @games.each do |game| %>
+    <div>
+      <h3><%= game.name %></h3>
+      <%= link_to "edit", edit_account_game_path(game)  %>
+      <%= link_to "delete", account_game_path(game), method: :delete %>
+    </div>
+    <% end %>
+  </div>
+</div>
