@@ -1,0 +1,11 @@
+<div class="container index">
+  <h1>All our Games</h1>
+  <div class="index-grid">
+    <% @games.each do |game| %>
+    <div>
+      <h3><%= game.name %></h3>
+      <p><%= game.platform %></p>
+    </div>
+    <% end %>
+  </div>
+</div>

@@ -11,3 +11,14 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+@import "games";
+
+a {
+ color:       inherit;
+ text-decoration:  none;
+ &:hover {
+  color:      inherit;
+  text-decoration: none;
+ }
+}
+
