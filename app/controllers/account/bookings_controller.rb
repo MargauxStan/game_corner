@@ -1,6 +1,6 @@
 class Account::BookingsController < ApplicationController
   def index
-    @bookings =  policy_scope(Booking).where(user: current_user)
+    @my_bookings =  policy_scope(Booking).where(user: current_user)
   end
 
   def accepted
