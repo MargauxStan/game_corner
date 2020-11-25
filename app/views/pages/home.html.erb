@@ -1,3 +1,23 @@
+<div class="navbar">
+  <div class="logo">
+    <%= link_to root_path do %>
+      <%= image_tag("Game-corner-logo1.png") %>
+    <% end %>
+  </div>
+  <div class="links">
+  <%= link_to "Signin", new_user_session_path %>
+  <%= link_to "Registration", new_user_registration_path, class: "btn_nav" %>
+  </div>
+</div>
+
+
+<div class="header">
+  <%= image_tag("manettesnes.jpg"), class: "img-head" %>
+  <div class="container">
+  <p>GAMES are sleeping fot a long time.<br>Help us to wake them up!</p>
+  </div>
+</div>
+
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 <%= link_to "see my games", account_games_path %>
