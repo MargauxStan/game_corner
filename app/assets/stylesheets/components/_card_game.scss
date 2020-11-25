@@ -3,6 +3,7 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 50px;
   margin-bottom: 50px;
+  margin-top: 35px;
 }
 
 .card_category {
@@ -18,7 +19,7 @@
   text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
   border: solid;
   border-color: grey;
-  border-radius: 2.5px;
+  border-radius: 10px;
 
 
     &:hover {
@@ -37,23 +38,29 @@
   white-space: nowrap;
   overflow: auto;
   text-overflow: ellipsis;
-  max-width: 50%;
+  max-width: 80%;
+  font-size: 12px;
 }
 
 .platform {
   position: absolute;
   left: 10px;
-  bottom: 70px;
+  bottom: 60px;
   border-bottom: solid;
+  font-size: 15px;
+  margin-right: 10px;
 }
 
 .price {
   position: absolute;
   top: 7px;
   right: 7px;
-  border-bottom: solid;
-  border-left: solid;
+  border: solid;
   border-radius: 0 0 0 50px;
+  padding-left: 20px;
+  background-color: #416C73;
+  border-color: #416C73;
+  color: white;
 }
 
 ul{
