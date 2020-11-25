@@ -1,7 +1,5 @@
 .footer{
   margin-top: 30px;
-  position: fixed; 
-  bottom: 0;
   width: 100%; 
   height: 150px;
   background: black; 
@@ -37,4 +35,8 @@
 .border-rigth{
   padding-right: 8px;
   border-right: 1px solid white;
+}
+
+.fix-footer{
+  min-height: calc(100vh - 275px);
 }
