@@ -1,12 +1,30 @@
 .header {
-  background-size: cover;
-  background-position: center;
-  padding: 300px 0;
+  display: grid;
+  grid-template-columns: 2fr 5fr;
+  position: relative;
   height: 100vh;
+  background-color: #192033;
   h1 {
   margin-top: 70px;
   margin-left: 120px;
   color: white;
   font-size: 60px;
   }
+}
+
+#header-title1{
+  position: absolute;
+  left: 5%;
+  top: 50px;
+}
+
+#header-title2{
+  position: absolute;
+  left: 25%;
+  top: 120px;
+}
+
+.header-img {
+  width: 100%;
+  border-radius: 100px 0 0 0;
 }
