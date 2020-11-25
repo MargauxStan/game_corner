@@ -22,8 +22,8 @@
 
 
     &:hover {
-    filter: grayscale(0);
-    -webkit-filter: grayscale(0);
+    filter: grayscale(1);
+    -webkit-filter: grayscale(0.8);
     text-decoration: none;
     transition: 250ms linear;
   }
@@ -35,9 +35,25 @@
   left: 10px;
   bottom: 10px;
   white-space: nowrap;
-  overflow: hidden;
+  overflow: auto;
   text-overflow: ellipsis;
-  max-width: 200px;
+  max-width: 50%;
+}
+
+.platform {
+  position: absolute;
+  left: 10px;
+  bottom: 70px;
+  border-bottom: solid;
+}
+
+.price {
+  position: absolute;
+  top: 7px;
+  right: 7px;
+  border-bottom: solid;
+  border-left: solid;
+  border-radius: 0 0 0 50px;
 }
 
 ul{
