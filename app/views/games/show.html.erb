@@ -5,6 +5,9 @@
       <%= @game.name %>
       <%= @game.platform %>
       <%= @game.price %>
+      <%= cl_image_tag @game.photo.key, height: 300, width: 400, crop: :fill %>
       <p>----------------</p>
     </li>
 </ul>
+<%= link_to 'book the game', new_game_booking_path(@game) %>
+
