@@ -1,5 +1,5 @@
 <div class="container">
-  <h1>My Reservations</h1>
+  <h2>My reservations</h2>
   <div>
     <% @my_bookings.each do |booking| %>
       <div class="card">
@@ -7,7 +7,24 @@
         <p>owner : <%= booking.game.user.username %></p>
         <p>starting date : <%= booking.starting_date %></p>
         <p>ending date : <%= booking.ending_date %></p>
-       
+        <p>status: <%= booking.status %></p>
+      </div>
+    <% end %>
+  </div>
+
+  <h2>My locations</h2>
+  <div>
+    <% @my_locations.each do |booking| %>
+      <div class="card">
+        <p>game: <%= booking.game.name %></p>
+        <p>renter : <%= booking.user.username %></p>
+        <p>starting date : <%= booking.starting_date %></p>
+        <p>ending date : <%= booking.ending_date %></p>
+        <p>status: <%= booking.status %></p>
+        <% if booking.status == "pending" %>
+          <%= link_to "Accept", accepted_account_booking_path(booking), class:"btn btn-success", method: :patch %>
+          <%= link_to "Decline", declined_account_booking_path(booking), class: "btn btn-warning", method: :patch %>
+        <% end %>
       </div>
     <% end %>
   </div>
