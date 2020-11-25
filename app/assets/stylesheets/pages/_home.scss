@@ -1,1 +1,29 @@
 // Specific CSS for your home-page
+.preview-games{
+  background-color: white;
+  display: grid;
+  padding: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.preview-title{
+  font-weight: bold;
+  padding-left: 20px;
+  font-family: Roboto;
+}
+
+.img-rounded-left{
+  border-radius: 50px 0 0 0;
+  opacity: 0.5;
+}
+
+.game-preview-grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.divider{
+  width: 35%;
+  height: 15px;
+  background-color: rgb(156, 170, 209);
+}
