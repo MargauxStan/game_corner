@@ -1,8 +1,7 @@
 .footer{
-  width: 100%;
-  height: 150px;
+  height: 200px;
   background: #192033;
-  padding-top: 20px;
+  padding: 50px;
     a{
       &:hover{
         color: #BCCEFF;
@@ -11,11 +10,11 @@
 }
 
 .socials{
-  padding: 10px 0;
-  border-bottom: 0.2px solid #C9C9C9;
+  padding-bottom: 12px;
+  border-bottom: 0.2px solid #7e8a97;
   text-align: center;
   .fab{
-    font-size: 30px;
+    font-size: 40px;
     margin-right: 10px;
   }
   a{
