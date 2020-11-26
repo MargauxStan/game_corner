@@ -2,12 +2,19 @@
   <h2>My reservations</h2>
   <div>
     <% @my_bookings.each do |booking| %>
-      <div class="card">
-        <p>game: <%= booking.game.name %></p>
-        <p>owner : <%= booking.game.user.username %></p>
-        <p>starting date : <%= booking.starting_date %></p>
-        <p>ending date : <%= booking.ending_date %></p>
-        <p>status: <%= booking.status %></p>
+      <div class="card-booking">
+         <div>
+          <% if booking.game.photo.attachment %>
+          <%= cl_image_tag booking.game.photo.key,  height: 300, width: 200, crop: :fill %>
+          <% end %>
+        </div>
+        <div>
+          <p>game: <%= booking.game.name %></p>
+          <p>owner : <%= booking.game.user.username %></p>
+          <p>starting date : <%= booking.starting_date %></p>
+          <p>ending date : <%= booking.ending_date %></p>
+          <p>status: <%= booking.status %></p>
+        </div>
       </div>
     <% end %>
   </div>
