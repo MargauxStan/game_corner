@@ -4,6 +4,16 @@
   <div class="divider-header"></div>
   <h1 id="header-title1"> GAMES are sleeping for a long time.</h1>
   <h1 id="header-title2">Help us to wake them up!</h1>
+    <div class="search-bar-home">
+      <%= form_tag games_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Enter a game and a console"
+        %>
+        <%= submit_tag "Search", class: "button-search" %>
+      <% end %>
+    </div>
 
 </div>
 <%= render "shared/preview-games" %>
