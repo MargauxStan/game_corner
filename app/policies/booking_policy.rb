@@ -16,4 +16,12 @@ class BookingPolicy < ApplicationPolicy
   def new?
     create?
   end
+
+  def accepted?
+    user == record.game.user
+  end
+
+  def declined?
+    user == record.game.user
+  end
 end
