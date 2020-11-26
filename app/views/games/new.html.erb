@@ -1,10 +1,15 @@
-<%= simple_form_for @game do |f| %>
-  <%= f.input :name %>
-  <%= f.input :description %>
-  <%= f.input :platform %>
-  <%= f.input :price %>
-  <%= f.input :url_trailer %>
-  <%= f.input :photo, as: :file %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
+<div class="container-form container">
 
-<% end %>
+  <%= simple_form_for @game do |f| %>
+    <%= f.input :name %>
+    <%= f.input :description %>
+    <%= f.input :platform %>
+    <%= f.input :price %>
+    <%= f.input :url_trailer %>
+    <%= f.input :photo, as: :file %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "Submit", class: "btn button-form" %>
+    </div>
+
+  <% end %>
+</div>

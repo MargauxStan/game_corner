@@ -1,0 +1,33 @@
+.container-form {
+  background-color: #192033;
+  margin-top: 100px;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  width: 400px;
+  border-radius: 30px;
+  color: white;
+  text-decoration: none;
+  padding: 50px;
+}
+body {
+  background-color: #EBEDF3;
+}
+
+.button-form {
+  background: transparent;
+  border: 0.12rem solid white;
+  border-radius: 1rem;
+  padding: 10px 40px;
+  color: white;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+    &:hover {
+      color: #192033;
+      border: 0.12rem solid #192033;
+      background: white;
+    }
+}
+
+
+
