@@ -1,12 +1,12 @@
 <div class="navbar">
   <div class="logo">
     <%= link_to root_path do %>
-      <%= image_tag("Game-corner-logo1.png") %>
+      <%= image_tag("logo3.png") %>
     <% end %>
   </div>
   <% if user_signed_in? %>
     <div class="dropdown">
-      <button class="btn button-form dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+      <button class="btn_nav dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
         Profile
       </button>
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
@@ -17,7 +17,7 @@
       </div>
     </div>
   <% else %>
-    <div class="links-nav">
+    <div class="links-nav sign-in">
     <%= link_to "Signin", new_user_session_path %>
     <%= link_to "Registration", new_user_registration_path, class: "btn_nav" %>
     </div>
