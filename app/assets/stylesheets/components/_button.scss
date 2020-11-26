@@ -10,3 +10,22 @@
       color: white;
     }
 }
+
+.btn-book{
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  background: transparent;
+  border: 0.12rem solid white;
+  border-radius: 1rem;
+  padding: 10px 40px;
+  color: white;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+    &:hover {
+      color: #192033;
+      border: 0.12rem solid #192033;
+      background: white;
+    }
+}
