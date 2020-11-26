@@ -1,4 +1,36 @@
+.index{
+  background-color: #EBEDF3;
+}
+
 .index-grid{
+  margin-top: 30px;
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.index-header{
+  position: relative;
+  img{
+    width: 100%;
+  }
+  h1 {
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    color: white;
+    font-size: 80px;
+    font-weight: bolder;
+    }
+}
+
+.search-bar{
+  position: absolute;
+  top: 80%;
+  left: 25%;
+  width: 50%;
+  form{
+    display: flex;
+  }
 }

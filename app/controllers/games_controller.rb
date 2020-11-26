@@ -3,7 +3,11 @@ class GamesController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
   
   def index
-    @games = policy_scope(Game).all
+    if params[:query].present?
+      @games = policy_scope(Game).search_by_name_and_platform(params[:query])
+    else
+      @games = policy_scope(Game).all
+    end
   end
   
   def show
