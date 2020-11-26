@@ -1,15 +1,26 @@
-<h1>games_show</h1>
-
-<ul>
-    <li>
-      <%= @game.name %>
-      <%= @game.platform %>
-      <%= @game.price %>
-      <% if @game.photo.attachment %>
-      <%= cl_image_tag @game.photo.key %>
-      <% end %>
-      <p>----------------</p>
-    </li>
-</ul>
-<%= link_to 'book the game', new_game_booking_path(@game) %>
+<div class="fix-footer">
+  <div class="index-header">
+    <%= image_tag "tv-game.jpg", class:"img-width-100" %>
+    <h1><%= @game.name %></h1>
+  </div>
+  <div class="container">
+    <div class="card-product">
+      <div>
+        <% if @game.photo.attachment %>
+        <%= cl_image_tag @game.photo.key,  height: 300, width: 200, crop: :fill %>
+        <% end %>
+      </div>
+      <div class="p-4">
+        <h3 class="mb-3"><%= @game.name %></h3>
+        <h5 class="border-bottom"><%= @game.platform %></h5>
+        <p class="pr-5 pt-3"><%= @game.description %></p>
+        
+      </div>
+      <%# if @game.user != current_user %> 
+      <p class="price"><%= @game.price %> € / per day</p>
+        <%= link_to 'book the game', new_game_booking_path(@game), class:"btn-book" %>
+      <%# end %> 
+    </div>
+  </div>
+</div>
 
