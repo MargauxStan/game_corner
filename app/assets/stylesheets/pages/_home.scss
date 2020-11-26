@@ -2,23 +2,27 @@
 .preview-games{
   background-color: #EBEDF3;
   display: grid;
-  padding: 30px;
+  padding-left: 50px;
   grid-template-columns: 1fr 1fr;
+  position: relative;
 }
 
 .preview-title{
   h3 {
-  font-weight: bolder;
-  padding-left: 25px;
+  font-weight: 700;
   font-family: Roboto;
-  font-size: 35px;
-  margin-top: 20px;
+  font-size: 40px;
+  margin-top: 40px;
+  padding-right: 50px;
   }
 }
 
 .img-rounded-left{
-  border-radius: 200px 0 0 0;
-  margin-top: 10px;
+  border-radius: 250px 0 0 0;
+  opacity: 70%;
+  margin-top: 50px;
+  padding-right: 30px;
+  height: 100vh;
 }
 
 .game-preview-grid{
@@ -27,10 +31,12 @@
 }
 
 .divider{
-  width: 35%;
-  height: 20px;
+  width: 250px;
+  height: 18px;
   background-color: #BCCEFF;
-  margin-bottom: 30px;
-  margin-left: 120px;
+  margin-left: 180px;
+  position: absolute;
+  left: 908px;
+  top: 145px;
 }
 

@@ -3,7 +3,8 @@
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 16px;
   margin-bottom: 50px;
-  padding-top: 10px;
+  padding-top: 30px;
+  padding-right: 30px;
 
   :hover {
     text-decoration: none;
@@ -18,46 +19,66 @@
   justify-content: center;
   align-items: center;
   color: white;
-  font-size: 24px;
-  font-weight: bold;
-  text-shadow: 1px 1px 3px rgba(0,0,0,0.2);
-  border-radius: 20px;
-  -webkit-filter: grayscale(0);
+  border-radius: 30px;
+  position:relative;
+  font-size: 14px;
+  font-weight: 300;
+  margin-top: 20px;
 }
 
 
 .title {
   position: absolute;
-  left: 10px;
-  bottom: 10px;
-  white-space: nowrap;
-  overflow: auto;
-  text-overflow: ellipsis;
-  max-width: 80%;
-  font-size: 12px;
+  left: 20px;
+  bottom: 15px;
+  font-size: 16px;
+  font-weight: bold;
 }
 
 .platform {
   position: absolute;
-  left: 10px;
-  bottom: 60px;
-  border-bottom: solid;
-  font-size: 15px;
-  margin-right: 10px;
+  left: 20px;
+  bottom: 42px;
+  font-size: 12px;
 }
 
 .price {
   position: absolute;
-  top: 7px;
-  right: 7px;
-  border: solid;
-  border-radius: 0 0 0 50px;
+  top: 15px;
+  right: 12px;
   padding-left: 20px;
-  background-color: #416C73;
-  border-color: #416C73;
   color: white;
+  font-size: 16px;
+  font-weight: bold;
 }
 
-ul{
-  list-style-type: none;
-  }
+.price-per-day {
+  font-weight: 300;
+  font-size: 14px;
+}
+
+.card-link {
+  background-color: #192033;
+  height: 300px;
+  display: flex;
+  color: white;
+  border-radius: 30px;
+  position:relative;
+  margin-top: 20px;
+    p {
+      font-size: 23px;
+      font-weight: bolder;
+      padding: 25px;
+      position: absolute;
+      bottom: 30px;
+      right: 12px;
+      i {
+        font-size: 40px;
+        font-weight: bolder;
+        position: absolute;
+        top: 120px;
+        right: 20px;
+      }
+    }
+}
+

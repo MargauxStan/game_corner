@@ -1,12 +1,12 @@
+
 <div class="preview-games">
 <%= image_tag "preview-games.jpg", alt: "Le Wagon", class: "img-rounded-left",width: "100%" %>
-
 <div class="p-3">
   <div class="preview-title">
   <h3>They will share with you a moment of pure entertainment...</h3>
+  <div class="divider">
+</div>
   </div>
-    <div class="divider">
-    </div>
 
   <div class="cards">
     <% @games.each do |game| %>
@@ -14,18 +14,23 @@
 
     <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1591631368886-bb78ae96ee13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')">
       <div class="title">
-        <h5><%= game.name %></h5>
+      <%= game.name %>
       </div>
-      <ul>
         <div class="platform">
-          <li><%= game.platform %></li>
+        <%= game.platform %>
         </div>
         <div class="price">
-          <li><%= game.price %>e /day</li>
+        <%= game.price %> $<div class="price-per-day">per day</div>
         </div>
-      </ul>
     </div>
     <% end %>
+    <% end %>
+    <%= link_to games_path do %>
+    <div class="card-link">
+      <p>Discover all availables games.
+      <i class="fas fa-long-arrow-alt-right"></i>
+      </p>
+    </div>
     <% end %>
   </div>
 </div>
