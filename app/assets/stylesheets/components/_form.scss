@@ -29,5 +29,21 @@ body {
     }
 }
 
+.button-form-login {
+  background: transparent;
+  border: 0.12rem solid white;
+  border-radius: 1rem;
+  padding: 10px 40px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-right: 85px;
+  margin-bottom: 20px;
+    &:hover {
+      color: #192033;
+      border: 0.12rem solid #192033;
+      background: white;
+    }
+}
 
 

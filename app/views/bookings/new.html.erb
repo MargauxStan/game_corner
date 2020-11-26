@@ -1,11 +1,13 @@
-<div class="container">
-  <h1>Book <%= @game.name %></h1>
-<%= simple_form_for [@game,@booking] do |f| %>
-  <%= f.input :starting_date %>
-  <%= f.input :ending_date %>
-  <%= f.submit "Submit", class: "btn btn-primary" %>
 
-<% end %>
-<%= link_to 'home', root_path %>
+<div class="container-form container">
+  <div class="container">
+    <h1>Book <%= @game.name %></h1>
+  <%= simple_form_for [@game,@booking] do |f| %>
+    <%= f.input :starting_date %>
+    <%= f.input :ending_date %>
+    <%= f.submit "Submit", class: "btn button-form-login" %>
 
+  <% end %>
+  <%= link_to 'home', root_path %>
+  </div>
 </div>
