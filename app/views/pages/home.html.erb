@@ -4,7 +4,7 @@
       <%= image_tag("Game-corner-logo1.png") %>
     <% end %>
   </div>
-  <div class="links">
+  <div class="links-nav">
   <%= link_to "Signin", new_user_session_path %>
   <%= link_to "Registration", new_user_registration_path, class: "btn_nav" %>
   </div>
@@ -17,9 +17,5 @@
   <h1 id="header-title1"> GAMES are sleeping for a long time.</h1>
   <h1 id="header-title2">Help us to wake them up!</h1>
 </div>
-
-<%= link_to "See my own games", account_games_path, class:"btn btn-primary"  %>
-<%= link_to "Add a Game", new_game_path, class:"btn btn-primary" %>
-
 <%= render "shared/preview-games" %>
 <%= render 'shared/footer' %>

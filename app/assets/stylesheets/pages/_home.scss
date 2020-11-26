@@ -1,20 +1,24 @@
 // Specific CSS for your home-page
 .preview-games{
-  background-color: white;
+  background-color: #EBEDF3;
   display: grid;
   padding: 30px;
   grid-template-columns: 1fr 1fr;
 }
 
 .preview-title{
-  font-weight: bold;
-  padding-left: 20px;
+  h3 {
+  font-weight: bolder;
+  padding-left: 25px;
   font-family: Roboto;
+  font-size: 35px;
+  margin-top: 20px;
+  }
 }
 
 .img-rounded-left{
-  border-radius: 50px 0 0 0;
-  opacity: 0.5;
+  border-radius: 200px 0 0 0;
+  margin-top: 10px;
 }
 
 .game-preview-grid{
@@ -24,7 +28,9 @@
 
 .divider{
   width: 35%;
-  height: 15px;
-  background-color: rgb(156, 170, 209);
+  height: 20px;
+  background-color: #BCCEFF;
+  margin-bottom: 30px;
+  margin-left: 120px;
 }
 

@@ -9,22 +9,34 @@
   margin-left: 120px;
   color: white;
   font-size: 60px;
+  font-weight: bolder;
   }
 }
 
 #header-title1{
   position: absolute;
-  left: 5%;
-  top: 50px;
+  left: 2%;
+  top: 175px;
 }
 
 #header-title2{
   position: absolute;
-  left: 25%;
-  top: 120px;
+  left: 30%;
+  top: 250px;
 }
 
 .header-img {
-  width: 100%;
-  border-radius: 100px 0 0 0;
+  width: 115%;
+  border-radius: 200px 0 0 0;
+}
+
+.links {
+  background: transparent;
+  border: 0.12rem solid white;
+  border-radius: 1rem;
+  color: white;
+  padding: 10px;
+    :hover {
+      color: white;
+    }
 }
