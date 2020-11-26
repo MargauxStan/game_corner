@@ -29,3 +29,43 @@
       background: white;
     }
 }
+
+.btn-accepted {
+  background: transparent;
+  border: 0.12rem solid green;
+  border-radius: 1rem;
+  padding: 10px 40px;
+  color: green;
+  margin: 20px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+    &:hover {
+      color: #192033;
+      border: 0.12rem solid #192033;
+      background: white;
+    }
+}
+
+.btn-declined{
+  background: transparent;
+  border: 0.12rem solid red;
+  border-radius: 1rem;
+  padding: 10px 40px;
+  color: red;
+  margin: 20px;
+  height: 50px;
+  text-align: center;
+  text-decoration: none;
+    &:hover {
+      color: #192033;
+      border: 0.12rem solid #192033;
+      background: white;
+    }
+}
+
+.booking-btns{
+  position: absolute;
+  bottom: 24px;
+  right: 16px;
+}

@@ -16,10 +16,10 @@
         <p class="pr-5 pt-3"><%= @game.description %></p>
 
       </div>
-      <% if @game.user != current_user %>
+      <%# if @game.user != current_user %> 
       <p class="price"><%= @game.price %> € / per day</p>
         <%= link_to 'book the game', new_game_booking_path(@game), class:"btn-book" %>
-      <% end %>
+      <%# end %> 
     </div>
   </div>
 </div>

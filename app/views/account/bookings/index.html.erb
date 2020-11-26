@@ -2,37 +2,50 @@
   <h2>My reservations</h2>
   <div>
     <% @my_bookings.each do |booking| %>
-      <div class="card-booking">
-         <div>
-          <% if booking.game.photo.attachment %>
-          <%= cl_image_tag booking.game.photo.key,  height: 300, width: 200, crop: :fill %>
-          <% end %>
+      <% if booking.status == "pending" || booking.status == "accepted" %>
+        <div class="card-booking">
+          <div>
+            <% if booking.game.photo.attachment %>
+            <%= cl_image_tag booking.game.photo.key,  height: 300, width: 200, crop: :fill %>
+            <% end %>
+          </div>
+          <div class="p-4">
+            <h3><%= booking.game.name %></h3>
+            <p>owner : <%= booking.game.user.username %></p>
+            <p>Starting from : <%= booking.starting_date.strftime('%A %d %b %Y') %></p>
+            <p>Ending on : <%= booking.ending_date.strftime('%A %d %b %Y') %></p>
+          </div>
+          <p class="status">status: <%= booking.status %></p>
         </div>
-        <div>
-          <p>game: <%= booking.game.name %></p>
-          <p>owner : <%= booking.game.user.username %></p>
-          <p>starting date : <%= booking.starting_date %></p>
-          <p>ending date : <%= booking.ending_date %></p>
-          <p>status: <%= booking.status %></p>
-        </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 
   <h2>My locations</h2>
   <div>
     <% @my_locations.each do |booking| %>
-      <div class="card">
-        <p>game: <%= booking.game.name %></p>
-        <p>renter : <%= booking.user.username %></p>
-        <p>starting date : <%= booking.starting_date %></p>
-        <p>ending date : <%= booking.ending_date %></p>
-        <p>status: <%= booking.status %></p>
-        <% if booking.status == "pending" %>
-          <%= link_to "Accept", accepted_account_booking_path(booking), class:"btn btn-success", method: :patch %>
-          <%= link_to "Decline", declined_account_booking_path(booking), class: "btn btn-warning", method: :patch %>
-        <% end %>
-      </div>
+      <% if booking.status == "pending" || booking.status == "accepted" %>
+        <div class="card-booking">
+          <div>
+            <% if booking.game.photo.attachment %>
+            <%= cl_image_tag booking.game.photo.key,  height: 300, width: 200, crop: :fill %>
+            <% end %>
+          </div>
+          <div class="p-4">
+            <h3><%= booking.game.name %></h3>
+            <p>renter : <%= booking.user.username %></p>
+            <p>Starting from : <%= booking.starting_date.strftime('%A %d %b %Y') %></p>
+            <p>Ending on : <%= booking.ending_date.strftime('%A %d %b %Y') %></p>
+          </div>
+          <p class="status">status: <%= booking.status %></p>
+          <div class="booking-btns">
+            <% if booking.status == "pending" %>
+              <%= link_to "Accept", accepted_account_booking_path(booking), class:"btn-accepted", method: :patch %>
+              <%= link_to "Decline", declined_account_booking_path(booking), class: "btn-declined", method: :patch %>
+            <% end %>
+          </div>
+        </div>
+      <%end%>
     <% end %>
   </div>
 </div>
