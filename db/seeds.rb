@@ -6,27 +6,17 @@
 #   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'faker'
+Booking.destroy_all
+Game.destroy_all
 User.destroy_all
 
-5.times do
-    user = User.new
-    user.username = Faker::Creature::Animal.name
-    user.email = Faker::Internet.email
-    user.password = "azerty"
-    user.save
-end
-
-users = User.all
-
-users.each do |user|
-    5.times do
-        game = Game.new
-        game.name = Faker::Game.title
-        game.platform = Faker::Game.platform
-        game.description = Faker::Lorem.paragraph(sentence_count: 10)
-        game.genre = Faker::Game.genre
-        game.price = Faker::Number.decimal(l_digits: 2)
-        game.user = user
-        game.save
-    end
-end
+clem = User.create!(username: "Clem", email: "clem@email.com", password:"azerty")
+marg = User.create!(username: "Marg", email: "marg@email.com", password:"azerty")
+momo = User.create!(username: "Momo", email: "momo@email.com", password:"azerty")
+ 
+Game.create!(name: "The Witcher Wild Hunt", platform: "PC", description: Faker::Lorem.paragraph(sentence_count: 10), price: 1, user: momo)
+Game.create!(name: "Unsharted 4", platform: "PS4", description: Faker::Lorem.paragraph(sentence_count: 10), price: 2, user: clem)
+Game.create!(name: "Mario Bross", platform: "Nintendo ds", description: Faker::Lorem.paragraph(sentence_count: 10), price: 1, user: marg)
+Game.create!(name: "Assassin Creed", platform: "PS5", description: Faker::Lorem.paragraph(sentence_count: 10), price: 3, user: clem)
+Game.create!(name: "No Man's Sky", platform: "PS4", description: Faker::Lorem.paragraph(sentence_count: 10), price: 2, user: momo)
+Game.create!(name: "Zelda Link's Awakening", platform: "Nintendo Switch", description: Faker::Lorem.paragraph(sentence_count: 10), price: 1, user: marg)

@@ -5,7 +5,9 @@
       <%= @game.name %>
       <%= @game.platform %>
       <%= @game.price %>
-      
+      <% if @game.photo.attachment %>
+      <%= cl_image_tag @game.photo.key %>
+      <% end %>
       <p>----------------</p>
     </li>
 </ul>
