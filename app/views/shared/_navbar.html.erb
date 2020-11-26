@@ -12,6 +12,7 @@
       <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
         <%= link_to "My games", account_games_path, class:"dropdown-item" %>
         <%= link_to "My Bookings", account_bookings_path, class:"dropdown-item" %>
+        <%= link_to "Add a game", new_game_path, class:"dropdown-item" %>
         <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
       </div>
     </div>
