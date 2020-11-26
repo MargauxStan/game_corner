@@ -1,13 +1,14 @@
 .btn_nav {
   background: transparent;
   border: 0.12rem solid white;
-  border-radius: 1rem;
-  padding: 10px 40px;
+  border-radius: 2rem;
+  padding: 10px 50px;
   color: white;
   margin: 20px;
   margin-right: 100px;
     &:hover {
-      color: white;
+      color: #222831;
+      background: white;
     }
 }
 
@@ -25,7 +26,6 @@
   text-decoration: none;
     &:hover {
       color: #192033;
-      border: 0.12rem solid #192033;
       background: white;
     }
 }

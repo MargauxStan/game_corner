@@ -1,14 +1,13 @@
 .container-form {
-  background-color: #192033;
+  background-color: #222831;
   margin-top: 100px;
   margin-bottom: 100px;
   padding-top: 30px;
   padding-bottom: 30px;
-  width: 400px;
+  width: 800px;
   border-radius: 30px;
   color: white;
   text-decoration: none;
-  padding: 50px;
 }
 body {
   background-color: #EBEDF3;
@@ -24,8 +23,7 @@ body {
   text-align: center;
   text-decoration: none;
     &:hover {
-      color: #192033;
-      border: 0.12rem solid #192033;
+      color: #222831;
       background: white;
     }
 }
@@ -41,8 +39,7 @@ body {
   margin-right: 85px;
   margin-bottom: 20px;
     &:hover {
-      color: #192033;
-      border: 0.12rem solid #192033;
+      color: #222831;
       background: white;
     }
 }
