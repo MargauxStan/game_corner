@@ -12,7 +12,11 @@
     <% @games.each do |game| %>
     <%= link_to game_path(game) do %>
 
-    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1591631368886-bb78ae96ee13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')">
+    <% if game.photo.attachment %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path game.photo.key, width: 400, height: 500, crop: :fill %>')">
+    <% else %>
+    <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/featured/?gaming')">
+    <% end %>
       <div class="title">
       <%= game.name %>
       </div>

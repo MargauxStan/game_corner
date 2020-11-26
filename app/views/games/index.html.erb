@@ -1,7 +1,6 @@
-<div class="index fix-footer">
-  <div class="index-header">
-    <%= image_tag "blue-console-p.jpg" %>
-    <h1>Discover our GAMES</h1>
+<div class="index">
+  <div class="index-header" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1580234811497-9df7fd2f357e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1047&q=80')">
+    <h1>Rent a game.<br>Be happy.</h1>
     <div class="search-bar">
       <%= form_tag games_path, method: :get do %>
         <%= text_field_tag :query,
@@ -17,19 +16,21 @@
     <div class="index-grid">
         <% @games.each do |game| %>
           <%= link_to game_path(game) do %>
-            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1591631368886-bb78ae96ee13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')">
-              <div class="title">
-                <h5><%= game.name %></h5>
-              </div>
-              <ul>
-                <div class="platform">
-                  <li><%= game.platform %></li>
-                </div>
-                <div class="price">
-                  <li><%= game.price %>e /day</li>
-                </div>
-              </ul>
+            <% if game.photo.attachment %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path game.photo.key, width: 400, height: 500, crop: :fill %>')">
+            <% else %>
+            <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/featured/?gaming')">
+            <% end %>
+            <div class="title">
+            <%= game.name %>
             </div>
+            <div class="platform">
+            <%= game.platform %>
+            </div>
+            <div class="price">
+            <%= game.price %> $<div class="price-per-day">per day</div>
+            </div>
+          </div>
           <% end %>
         <% end %>
       </div>
