@@ -8,6 +8,7 @@
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 35px;
   grid-row-gap: 30px;
+  margin-bottom: 50px;
 }
 
 .index-header{
@@ -27,11 +28,28 @@
 .search-bar{
   position: absolute;
   top: 80%;
-  left: 25%;
-  width: 50%;
+  left: 15.5%;
+  width: 38%;
   form{
     display: flex;
   }
+}
+
+.button-search {
+  background: transparent;
+  border: 0.12rem solid white;
+  border-radius: 1rem;
+  padding-left: 60px;
+  padding-right: 60px;
+  color: white;
+  text-align: center;
+  text-decoration: none;
+  margin-left: 20px;
+    &:hover {
+      color: #192033;
+      border: 0.12rem solid #192033;
+      background: white;
+    }
 }
 
 .img-width-100{
