@@ -1,11 +1,35 @@
-<div class="container index fix-footer">
-  <h1>All our Games</h1>
-  <div class="index-grid">
-    <% @games.each do |game| %>
-    <div>
-      <h3><%= game.name %></h3>
-      <p><%= game.platform %></p>
+<div class="index fix-footer">
+  <div class="index-header">
+    <%= image_tag "blue-console-p.jpg" %>
+    <h1>Discover our GAMES</h1>
+    <div class="search-bar">
+      <%= form_tag games_path, method: :get do %>
+        <%= text_field_tag :query,
+          params[:query],
+          class: "form-control",
+          placeholder: "Enter a game and a console"
+        %>
+        <%= submit_tag "Search", class: "btn btn-primary" %>
+      <% end %>
     </div>
-    <% end %>
+  </div>
+  <div class="container">
+    <div class="index-grid">
+        <% @games.each do |game| %>
+        <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1591631368886-bb78ae96ee13?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80')">
+          <div class="title">
+            <h5><%= game.name %></h5>
+          </div>
+          <ul>
+            <div class="platform">
+              <li><%= game.platform %></li>
+            </div>
+            <div class="price">
+              <li><%= game.price %>e /day</li>
+            </div>
+          </ul>
+        </div>
+        <% end %>
+      </div>
   </div>
 </div>
