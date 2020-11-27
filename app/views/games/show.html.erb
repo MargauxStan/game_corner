@@ -1,5 +1,5 @@
 <% if @game.photo.attachment %>
-<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @game.photo.key, width: 400, height: 500, crop: :fill %>')">
+<div class="banner-show" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url('<%= cl_image_path @game.photo.key %>')">
   <div class="container">
     <h1><%= @game.name %></h1>
     <h2>Une valeur sûre.</h2>
@@ -16,11 +16,6 @@
 
   <div class="container">
     <div class="card-product">
-      <div>
-        <% if @game.photo.attachment %>
-        <%= cl_image_tag @game.photo.key,  height: 300, width: 200, crop: :fill %>
-        <% end %>
-      </div>
       <div class="p-4">
         <h3 class="mb-3"><%= @game.name %></h3>
         <h5 class="border-bottom"><%= @game.platform %></h5>
