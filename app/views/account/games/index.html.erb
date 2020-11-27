@@ -1,12 +1,41 @@
-<h1>Account::Games#index</h1>
-<p>Find me in app/views/account/games/index.html.erb</p>
-<p>User:</p>
+<h2 style="margin-left: 50px"> My games</h2>
+
 <% if current_user.photo.attachment %>
   <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
 <% end %>
-<p>---------------------</p>
-<% @games.each do |game| %>
-<h3><%= game.name %></h3>
-<%= link_to "Edit", edit_account_game_path(game)  %>
-<%= link_to "Delete", account_game_path(game), method: :delete %>
-<% end %>
+
+<div class="cards-bis">
+  <% @games.each do |game| %>
+
+  <% if game.photo.attachment %>
+  <div class="card-category-bis" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('<%= cl_image_path game.photo.key, width: 400, height: 500, crop: :fill %>')">
+    <% else %>
+    <div class="card-category-bis" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://source.unsplash.com/featured/?gaming')">
+      <% end %>
+      <div class="title">
+        <%= game.name %>
+      </div>
+      <div class="platform">
+        <%= game.platform %>
+      </div>
+      <div class="price">
+        <%= game.price %> $<div class="price-per-day">per day</div>
+
+
+      </div>
+      <div class="icon-card d-flex flex-column">
+        <div>
+          <%= link_to edit_account_game_path(game) do %>
+        </div>
+          <i class="far fa-edit"></i>
+        <% end %>
+        <div>
+          <%= link_to  account_game_path(game), method: :delete do %>
+        </div>
+          <i class="fas fa-trash"></i>
+        <% end %>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
