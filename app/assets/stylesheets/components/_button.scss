@@ -66,3 +66,16 @@
   bottom: 35px;
   right: 16px;
 }
+
+.btn-show-booking {
+  background: transparent;
+  border: 0.12rem solid #192033;
+  border-radius: 2rem;
+  padding: 10px 50px;
+  color: #192033;
+  margin-right: 100px;
+    &:hover {
+      color: white;
+      background: #192033;
+    }
+}
