@@ -1,4 +1,6 @@
-<h2 style="margin-left: 50px"> My games</h2>
+<div class="container">
+<div class="mygames">
+<h2> My games</h2>
 
 <% if current_user.photo.attachment %>
   <%= cl_image_tag current_user.photo.key, height: 300, width: 400, crop: :fill %>
@@ -38,4 +40,6 @@
     </div>
     <% end %>
   </div>
+</div>
+</div>
 </div>

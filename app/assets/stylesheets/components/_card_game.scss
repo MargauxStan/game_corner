@@ -17,8 +17,6 @@
   grid-gap: 10px;
   margin-bottom: 50px;
   padding-top: 30px;
-  padding-right: 80px;
-  padding-left: 80px;
 
   :hover {
     text-decoration: none;
@@ -40,6 +38,13 @@
   margin-top: 20px;
 }
 
+.mygames {
+  h2 {
+    font-size: 50px;
+    font-weight: 700;
+    margin-top: 50px;
+  }
+}
 .card-category-bis {
   background-size: cover;
   background-position: center;
@@ -54,7 +59,7 @@
   font-weight: 300;
   margin-top: 20px;
   width: 200px;
-  margin: 50px;
+  margin: 20px;
 }
 
 
@@ -199,6 +204,6 @@
     position: absolute;
     top: 15px;
     left: 15px;
-    font-size: 20px
+    font-size: 15px
 
   }
