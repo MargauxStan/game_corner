@@ -34,5 +34,22 @@
       <% end %>
 
 </div>
+      <%= link_to 'Add a review', new_game_review_path(@game), class:"btn-review" %>
+
+    </div>
+    <div class="reviews">
+      <h3>Reviews</h3>
+      <% @game.reviews.each do |review| %>
+        <div class="card card-review">
+          <p><%= review.content %></p>
+          <p>
+          <%review.rating.times do %>
+              <i class="fas fa-star"></i>
+          <% end %>
+          </p>
+        </div>
+      <% end %>
+    </div>
+  </div>
 </div>
 

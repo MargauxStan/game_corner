@@ -1,0 +1,12 @@
+<div class="container-form container" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url('https://images.unsplash.com/photo-1580234811497-9df7fd2f357e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1047&q=80')">
+
+  <%= simple_form_for [@game, @review] do |f| %>
+  <h2>Give a review to <%= @game.name %></h2>
+    <%= f.input :content %>
+    <%= f.input :rating %>
+    <div class="d-flex justify-content-center">
+      <%= f.submit "Submit", class: "btn button-form" %>
+    </div>
+
+  <% end %>
+</div>
