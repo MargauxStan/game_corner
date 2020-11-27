@@ -1,5 +1,6 @@
 <div class="container">
-  <h2>My reservations</h2>
+  <div class="reservations">
+  <h2>I booked<br>those<span class="color-yellow"> games.</span></h2>
   <div>
     <% @my_bookings.each do |booking| %>
       <% if booking.status == "pending" || booking.status == "accepted" %>
@@ -11,17 +12,23 @@
           </div>
           <div class="p-4">
             <h3><%= booking.game.name %></h3>
-            <p>owner : <%= booking.game.user.username %></p>
-            <p>Starting from : <%= booking.starting_date.strftime('%A %d %b %Y') %></p>
-            <p>Ending on : <%= booking.ending_date.strftime('%A %d %b %Y') %></p>
+            <p><%= booking.game.platform %></p>
+            <p><strong>Owner:</strong> <%= booking.game.user.username %></p>
+            <p><strong>Starting from:</strong> <%= booking.starting_date.strftime('%A %d %b %Y') %></p>
+            <p><strong>Ending on:</strong> <%= booking.ending_date.strftime('%A %d %b %Y') %></p>
           </div>
-          <p class="status">status: <%= booking.status %></p>
+          <p class="status">Status: <strong><%= booking.status %></p></strong>
         </div>
       <% end %>
     <% end %>
   </div>
+  </div>
+</div>
 
-  <h2>My locations</h2>
+  <div class="white-background">
+  <div class="container">
+  <div class="locations">
+  <h2>My games<br>currently<span class="color-yellow"> rented.</span></h2>
   <div>
     <% @my_locations.each do |booking| %>
       <% if booking.status == "pending" || booking.status == "accepted" %>
@@ -33,11 +40,12 @@
           </div>
           <div class="p-4">
             <h3><%= booking.game.name %></h3>
-            <p>renter : <%= booking.user.username %></p>
-            <p>Starting from : <%= booking.starting_date.strftime('%A %d %b %Y') %></p>
-            <p>Ending on : <%= booking.ending_date.strftime('%A %d %b %Y') %></p>
+            <p><%= booking.game.platform %></p>
+            <p><strong>Renter:</strong> <%= booking.user.username %></p>
+            <p><strong>Starting from:</strong> <%= booking.starting_date.strftime('%A %d %b %Y') %></p>
+            <p><strong>Ending on:</strong> <%= booking.ending_date.strftime('%A %d %b %Y') %></p>
           </div>
-          <p class="status">status: <%= booking.status %></p>
+          <p class="status">Status: <strong><%= booking.status %></p></strong>
           <div class="booking-btns">
             <% if booking.status == "pending" %>
               <%= link_to "Accept", accepted_account_booking_path(booking), class:"btn-accepted", method: :patch %>
@@ -49,3 +57,6 @@
     <% end %>
   </div>
 </div>
+</div>
+</div>
+
