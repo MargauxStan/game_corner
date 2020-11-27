@@ -32,9 +32,9 @@
 </div>
 
     <div class="reviews">
-      <h3>Reviews</h3>
+      <h3 id="review-title">Reviews</h3>
       <% @game.reviews.each do |review| %>
-        <div class="card card-review">
+        <div class="card-review">
           <p><%= review.content %></p>
           <p>
           <%review.rating.times do %>
