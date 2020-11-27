@@ -30,13 +30,12 @@
 
       <% if @game.user != current_user %>
       <p class="price"><%= @game.price %> € / per day</p>
-        <%= link_to 'book the game', new_game_booking_path(@game), class:"btn-book" %>
+        <%= link_to 'Book this game', new_game_booking_path(@game), class:"btn-book2" %>
       <% end %>
 
-</div>
       <%= link_to 'Add a review', new_game_review_path(@game), class:"btn-review" %>
+</div>
 
-    </div>
     <div class="reviews">
       <h3>Reviews</h3>
       <% @game.reviews.each do |review| %>
@@ -51,5 +50,4 @@
       <% end %>
     </div>
   </div>
-</div>
 
