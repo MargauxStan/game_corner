@@ -4,6 +4,7 @@
       <%= image_tag("logo3.png") %>
     <% end %>
   </div>
+
   <% if user_signed_in? %>
     <div class="dropdown">
       <button class="btn_nav dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -15,12 +16,18 @@
         <%= link_to "Add a game", new_game_path, class:"dropdown-item" %>
         <%= link_to "Log out", destroy_user_session_path, method: :delete, class:"dropdown-item" %>
       </div>
+      <span class="border-nav">
+    <%= link_to "Book a game", games_path, class: "btn-book-game" %>
+  </span>
     </div>
+
   <% else %>
     <div class="links-nav sign-in">
     <%= link_to "Signin", new_user_session_path %>
     <%= link_to "Registration", new_user_registration_path, class: "btn_nav" %>
+    <span class="border-nav">
+    <%= link_to "Book a game", games_path, class: "btn-book-game-log" %>
+  </span>
     </div>
   <% end %>
 </div>
-

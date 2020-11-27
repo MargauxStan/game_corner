@@ -11,20 +11,6 @@
   }
 }
 
-.cards-bis {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-gap: 10px;
-  margin-bottom: 50px;
-  padding-top: 30px;
-  padding-right: 80px;
-  padding-left: 80px;
-
-  :hover {
-    text-decoration: none;
-  }
-}
-
 .card-category {
   background-size: cover;
   background-position: center;
@@ -38,23 +24,6 @@
   font-size: 14px;
   font-weight: 300;
   margin-top: 20px;
-}
-
-.card-category-bis {
-  background-size: cover;
-  background-position: center;
-  height: 300px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  border-radius: 30px;
-  position:relative;
-  font-size: 14px;
-  font-weight: 300;
-  margin-top: 20px;
-  width: 200px;
-  margin: 50px;
 }
 
 
@@ -162,11 +131,4 @@
     height: 50px;
     text-align: center;
     text-decoration: none;
-  }
-
-  .icon-card {
-    position: absolute;
-    top: 15px;
-    left: 15px;
-    font-size: 20px
   }
