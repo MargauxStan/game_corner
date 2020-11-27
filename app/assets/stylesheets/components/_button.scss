@@ -30,6 +30,24 @@
     }
 }
 
+.btn-review{
+  position: absolute;
+  bottom: 10px;
+  right: 270px;
+  background: transparent;
+  border: 0.12rem solid white;
+  border-radius: 1rem;
+  padding: 10px 40px;
+  color: white;
+  margin: 20px;
+  text-align: center;
+  text-decoration: none;
+    &:hover {
+      color: #192033;
+      background: white;
+    }
+}
+
 .btn-accepted {
   background: transparent;
   border: 0.12rem solid #03c4a1;
