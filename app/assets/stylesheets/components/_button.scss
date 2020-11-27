@@ -5,7 +5,7 @@
   padding: 10px 50px;
   color: white;
   margin: 20px;
-  margin-right: 100px;
+  margin-right: 40px;
     &:hover {
       color: #222831;
       background: white;
@@ -77,5 +77,42 @@
     &:hover {
       color: white;
       background: #192033;
+    }
+}
+
+.btn-book-game {
+  background: white;
+  border: 0.12rem solid white;
+  border-radius: 2rem;
+  padding: 10px 30px;
+  color: #192033;
+  margin: 20px;
+  margin-left: 40px;
+  margin-right: 30px;
+    &:hover {
+      color: white;
+      border: 0.12rem solid white;
+      background: transparent;
+    }
+}
+
+.border-nav {
+  border-left: 0.12rem solid white;
+  padding-right: 50px;
+}
+
+.btn-book-game-log {
+  background: transparent;
+  border: 0.12rem solid white;
+  border-radius: 2rem;
+  padding: 10px 30px;
+  color: white;
+  margin: 20px;
+  margin-left: 40px;
+  margin-right: 30px;
+    &:hover {
+      color: #192033;
+      border: 0.12rem solid white;
+      background: white;
     }
 }
