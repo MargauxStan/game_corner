@@ -3,8 +3,8 @@
   <div class="container">
     <h1>Book <%= @game.name %></h1>
   <%= simple_form_for [@game,@booking] do |f| %>
-    <%= f.input :starting_date %>
-    <%= f.input :ending_date %>
+    <%= f.input :starting_date, as: :string, input_html: { id: "range_start" }  %>
+    <%= f.input :ending_date, as: :string, input_html: { id: "range_end" }  %>
     <%= f.submit "Submit", class: "btn button-form-login" %>
 
   <% end %>
