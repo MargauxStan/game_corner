@@ -7,6 +7,6 @@
 <p>---------------------</p>
 <% @games.each do |game| %>
 <h3><%= game.name %></h3>
-<%= link_to "edit", edit_account_game_path(game)  %>
-<%= link_to "delete", account_game_path(game), method: :delete %>
+<%= link_to "Edit", edit_account_game_path(game)  %>
+<%= link_to "Delete", account_game_path(game), method: :delete %>
 <% end %>

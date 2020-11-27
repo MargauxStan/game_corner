@@ -1,9 +1,36 @@
 .booking-validation{
-  background-color: #222831;
-  margin-bottom: 0;
-  color: white;
+  margin-bottom: 50px;
+  color: #222831;
   padding: 30px;
   h2{
     margin: 50px 0;
+    font-weight: 700;
+    font-size: 40px;
   }
+}
+
+.reservations {
+  h2 {
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 70px;
+  }
+}
+
+.locations {
+  padding-bottom: 50px;
+  h2 {
+    padding-top: 50px;
+    margin-top: 50px;
+    font-weight: 700;
+    font-size: 70px;
+  }
+}
+
+.white-background {
+  background-color: white;
+}
+
+.color-yellow {
+  color: #D6B10C;
 }
